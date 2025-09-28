@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <header>login</header>
-</body>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1 id="title">log-In</h1>
+    <form>
+      <label for="username">Enter username</label>
+      <input type="text" id="username" placeholder="username" /><br />
+      <label for="password">Enter password</label>
+      <input type="text" id="password" placeholder="password" /><br />
+      <p id="error" style="color: red; font-size: 25px"></p>
+      <br />
+      <button id="loginBtn">Login</button><br />
+      <button id="signup">dont have a user?<br />SignUp</button><br /><br />
+      <a href="#">forgot your password?</a>
+    </form>
+  </body>
+  <script src="./index.js"></script>
 </html>
