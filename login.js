@@ -21,7 +21,8 @@ document.getElementById("loginBtn").addEventListener("click", function (e) {
 
   if (users[username] && users[username] === password) {
     localStorage.setItem("username", username); // save logged in user
-    alert("hello!"); // window.location.href = "home.html"; // go to homepage
+    // alert("hello!");
+    window.location.href = "home.html"; // go to homepage
   } else {
     document.getElementById("error").textContent =
       "Invalid username or password!";
