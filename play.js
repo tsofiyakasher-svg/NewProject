@@ -75,6 +75,14 @@ let openCards = [
   "?",
 ];
 
+const popup = document.getElementById("rulesPopup");
+const closebtn = document.getElementById("closePopup");
+console.log(closebtn);
+
+closebtn.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
 let flippedCards = [];
 
 function flipCard(cardNumber) {
@@ -152,16 +160,21 @@ function ogshape(first, second) {
   cardElements[second].style.transform = "scale(1)";
 }
 
-let button = document.getElementsByName("burtto");
-document.button.addEventListener("onclick", mix());
+const button = document.getElementById("button");
+button.addEventListener("click", () => shuffle(cards));
 
-function mix() {
-  let numbers = [
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-    21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35,
-  ];
+function shuffle(cards) {
+  let arr2 = [];
+  for (let i = 0; i < cards.length; i++) {
+    const random = Math.floor(Math.random() * (cards.length - 1));
 
-  const mix = document.getElementsByClassName("card");
+    let w = cards[random];
+    arr2.push(w);
+  }
 
-  document.mix.addEventListener("onclick", flipCard());
+  for (let j = 0; j < cards.length; j++) {
+    cards[j] = arr2[j];
+  }
 }
+
+shuffle(cards);
