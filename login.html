@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./login.css" />
   </head>
   <body>
     <h1 id="title">log-In</h1>
@@ -15,10 +15,17 @@
       <input type="text" id="password" placeholder="password" /><br />
       <p id="error" style="color: red; font-size: 25px"></p>
       <br />
-      <button id="loginBtn">Login</button><br />
-      <button id="signup">dont have a user?<br />SignUp</button><br /><br />
-      <a href="#">forgot your password?</a>
+      <button id="loginBtn" type="button">Login</button><br />
+      <button id="signup" type="button">dont have a user?<br />SignUp</button
+      ><br /><br />
+      <a id="forgotpassword" href="#">forgot your password?</a>
+      <p
+        id="forgotText"
+        style="display: none; color: rgb(0, 0, 0); font-weight: bold"
+      >
+        haha your loss!
+      </p>
     </form>
   </body>
-  <script src="./index.js"></script>
+  <script src="./login.js"></script>
 </html>
