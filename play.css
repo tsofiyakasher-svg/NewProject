@@ -1,0 +1,65 @@
+body {
+  background-color: lightsalmon;
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.card {
+  width: 200px;
+  height: 100px;
+  background-color: green;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  line-height: 100px;
+  margin: 10px;
+  transition: transform 1s ease;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  margin-top: 0px;
+}
+
+#logo {
+  height: 200px;
+  width: auto;
+  margin-left: 1300px;
+}
+
+nav {
+  background-color: white;
+}
+
+#continer {
+  display: flex;
+  text-align: center;
+  position: relative;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+@keyframes snake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.card:hover {
+  animation: snake 0.5s infinite;
+}
+
+button {
+  margin-left: 690px;
+}
