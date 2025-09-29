@@ -1,19 +1,32 @@
-        // שומר את נתוני הטופס ב-LocalStorage ומציג אותם
-        function saveFormData() {
-            const username = document.getElementById('sign').value;
-            const password = document.getElementById('up').value;
-            const savedDataDiv = document.getElementById('savedData');
+// שומר את נתוני הטופס ב-LocalStorage ומציג אותם
+function saveFormData() {
+  const username = document.getElementById("sign").value;
+  const password = document.getElementById("up").value;
+  const confirmPassword = document.getElementById("up2").value;
 
-            if (username && password) {
-                localStorage.setItem('sign', username);
-                localStorage.setItem('up', password);
-                savedDataDiv.innerHTML = `נתונים שמורים:<br>שם משתמש: ${username}<br>סיסמה: ${password}`;
-                alert("The data was saved successfully");
-            } else {
-                savedDataDiv.innerHTML = 'אנא מלא את כל השדות.';
-                alert("Please fill in all fields.");
-            }
-        }
+  const savedDataDiv = document.getElementById("savedData");
 
-document.getElementById('button2').addEventListener("click",saveFormData)
-        
+  if (!username || !password || !confirmPassword) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
+  let users = JSON.parse(localStorage.getItem("users")) || {};
+  users[username] = password;
+  localStorage.setItem("users", JSON.stringify(users));
+  alert(`${username} was saved successfully`);
+}
+
+document.getElementById("button2").addEventListener("click", (e) => {
+  e.preventDefault(); // stop form reload
+  saveFormData();
+});
+
+document.getElementById("loginBtn").addEventListener("click", (e) => {
+  e.preventDefault(); // also stop reload
+  window.location.href = "login.html";
+});
