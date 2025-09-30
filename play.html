@@ -19,9 +19,9 @@
       </div>
     </div>
     <nav>
-      <img id="logo" src="./logo.jpg" />
+      <!-- <img id="logo" src="./logo.jpg" /> -->
+      <h1>משחק זיכרון</h1>
     </nav>
-    <h1>משחק זיכרון</h1>
     <div id="continer">
       <div class="card" onclick="flipCard(0)">?</div>
       <div class="card" onclick="flipCard(1)">?</div>
@@ -69,8 +69,10 @@
       <div class="card" onclick="flipCard(34)">?</div>
       <div class="card" onclick="flipCard(35)">?</div>
     </div>
-
-    <button id="button">משחק חדש</button>
+    <div id="button">
+      <button id="button1">ערבוב קלפים</button>
+      <button id="button2" onclick="window.location.reload()">משחק חדש</button>
+    </div>
   </body>
   <script src="./play.js"></script>
 </html>
