@@ -6,6 +6,7 @@ body {
 }
 
 .card {
+  font-size: 66px;
   width: 200px;
   height: 100px;
   background-color: green;
@@ -80,16 +81,25 @@ nav {
 }
 
 .popup {
-  display: block;
+  display: none;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 
-  display: flex;
   align-items: center;
   justify-content: center;
 }
+/* rules popup */
+#rulesPopup {
+  display: flex;
+}
+
+/* win popup */
+#win {
+  display: none; /* stays hidden until you win */
+}
+
 .popup-content {
   background-color: white;
   padding: 20px;
