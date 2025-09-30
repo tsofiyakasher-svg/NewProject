@@ -1,7 +1,22 @@
+.item {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+}
 
-      .games {
-        padding: 20px;
-      }
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes image fill without distortion */
+  border-radius: 10px; /* optional for style */
+}
+#games {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between items */
+  justify-content: center;
+}
+
       body {
         background-color: rgb(211, 255, 240);
         margin: 0;
