@@ -8,6 +8,8 @@
   </head>
 
   <body>
+    <audio id="loseSound" src="loseSound.mp3" preload="auto"></audio>
+    <audio id="winnerSound" src="winnerSound.mp3" preload="auto"></audio>
     <div id="rulesPopup" class="popup">
       <div class="popup-content">
         <button id="closePopup" class="close">x</button>
@@ -18,6 +20,7 @@
         <p>good luck!</p>
       </div>
     </div>
+    <audio id="startGameSound" src="startGameSound.mp3" preload="auto"></audio>
     <nav>
       <img id="logo" src="./logo.jpg" />
     </nav>
@@ -38,10 +41,10 @@
       <div class="card" onclick="flipCard(10)">?</div>
       <div class="card" onclick="flipCard(11)">?</div>
 
-      <div class="card" onclick="flipCard(12)">?</div>
-      <div class="card" onclick="flipCard(13)">?</div>
+      <!-- <div class="card" onclick="flipCard(12)">?</div>
+      <div class="card" onclick="flipCard(13)">?</div> -->
 
-      <div class="card" onclick="flipCard(14)">?</div>
+      <!-- <div class="card" onclick="flipCard(14)">?</div>
       <div class="card" onclick="flipCard(15)">?</div>
       <div class="card" onclick="flipCard(16)">?</div>
       <div class="card" onclick="flipCard(17)">?</div>
@@ -67,8 +70,21 @@
       <div class="card" onclick="flipCard(32)">?</div>
       <div class="card" onclick="flipCard(33)">?</div>
       <div class="card" onclick="flipCard(34)">?</div>
-      <div class="card" onclick="flipCard(35)">?</div>
+      <div class="card" onclick="flipCard(35)">?</div> -->
     </div>
+    <div id="end">
+      <div id="win" class="ends popup">
+        <div class="popup-content">
+          <button class="close" id="closeWin">&times;</button>
+          <h1>🎉good job!! 🎉</h1>
+          <h2>⭐⭐⭐⭐⭐</h2>
+          <p>you found all the pairs!</p>
+          <p>now you can exist or start a new Game</p>
+        </div>
+      </div>
+      <div id="loose" class="ends"></div>
+    </div>
+    <audio id="winSound" src="winSound.mp3" preload="auto"></audio>
 
     <button id="button">משחק חדש</button>
   </body>

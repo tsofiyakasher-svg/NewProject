@@ -6,6 +6,7 @@ body {
 }
 
 .card {
+  font-size: 66px;
   width: 200px;
   height: 100px;
   background-color: green;
@@ -64,16 +65,25 @@ button {
   margin-left: 690px;
 }
 .popup {
-  display: block;
+  display: none;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 
-  display: flex;
   align-items: center;
   justify-content: center;
 }
+/* rules popup */
+#rulesPopup {
+  display: flex;
+}
+
+/* win popup */
+#win {
+  display: none; /* stays hidden until you win */
+}
+
 .popup-content {
   background-color: white;
   padding: 20px;
@@ -93,4 +103,17 @@ button {
   background: transparent;
   font-size: 22px;
   cursor: pointer;
+}
+
+
+/* shuffle animation */
+@keyframes shuffleAnim {
+  0%   { opacity: 1; transform: scale(1); }
+  50%  { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.shuffle {
+  animation: shuffleAnim 0.7s ease-in-out;
+  backface-visibility: hidden;
 }
